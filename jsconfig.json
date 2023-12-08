@@ -2,17 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/public/*":["public/*"],
-      "@/app/*":["src/app/*"],
-      "@/api/*":["src/app/api/*"],
-      "@/utils/*":["src/Utils/*"],
-      "@/models/*":["src/Models/*"],
-      "@/layout/*":["src/Components/Layout/*"],
-      "@/modules/*":["src/Components/Modules/*"],
-      "@/templates/*":["src/Components/Templates/*"],
-      "@/providers/*":["src/Providers/*"],
-      // "@/constants/*": ["src/constants/*"]
+      "@/public/*": ["public/*"],
+      "@/app/*": ["src/app/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/models/*": ["src/models/*"],
+      "@/layout/*": ["src/components/layout/*"],
+      "@/module/*": ["src/components/module/*"],
+      "@/template/*": ["src/components/template/*"],
+      "@/providers/*": ["src/providers/*"],
+      "@/api/*": ["src/app/api/*"],
+      "@/constants/*": ["src/constants/*"]
     }
   }
-
 }
