@@ -41,6 +41,7 @@ export async function POST(req) {
       category,
       amenities,
       rules,
+      pictures,
     } = await req.json();
 
     const session = await getServerSession(req);
@@ -89,6 +90,7 @@ export async function POST(req) {
       category,
       price: +price,
       userId: new Types.ObjectId(user._id),
+      pictures,
     });
     console.log(newProfile);
     return NextResponse.json(
@@ -120,6 +122,7 @@ export async function PATCH(req) {
       category,
       amenities,
       rules,
+      pictures,
     } = await req.json();
 
     const session = await getServerSession(req);
@@ -177,6 +180,9 @@ export async function PATCH(req) {
     profile.amenities = amenities;
     profile.rules = rules;
     profile.category = category;
+    if (pictures && pictures.length > 0) {
+      profile.pictures = pictures;
+    }
     profile.save();
 
     return NextResponse.json(

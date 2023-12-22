@@ -5,22 +5,20 @@
   cursor: pointer;
 }
 
-.container button {
-  border: none;
-  background: none;
-  font-size: 1rem;
-  color: grey;
-  height: 20px;
-  transition: all ease-in 0.1s;
-  cursor: pointer;
-}
 
-.container:hover button {
-  color: #304ffe;
-}
 
 .container svg {
   margin-left: 10px;
   font-size: 1.2rem;
-  color: #304ffe;
+  color: #7210FF;
+}
+.profileSubDetail {
+  box-shadow: #304ffe4a 0px 4px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

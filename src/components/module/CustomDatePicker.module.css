@@ -8,7 +8,7 @@
 
 .container input {
   width: 110px;
-  border: 1px #304ffe dashed;
+  border: 1px #7210FF dashed;
   color: grey;
   border-radius: 5px;
   padding: 10px;
@@ -16,4 +16,5 @@
   height: 30px;
   margin-left: 10px;
   text-align: center;
+  background-color: #F2EDED !important;
 }

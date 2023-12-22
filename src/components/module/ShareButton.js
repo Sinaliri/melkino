@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { LuShare2 } from "react-icons/lu";
 import styles from "@/module/ShareButton.module.css";
+import { Button, Typography } from "@mui/material";
 
 function ShareButton() {
   const [url, setUrl] = useState("");
@@ -14,9 +15,11 @@ function ShareButton() {
 
   return (
     <CopyToClipboard text={url}>
-      <div className={styles.container}>
-        <LuShare2 />
-        <button>اشتراک گذاری</button>
+      <div className={`${styles.container} ${styles.profileSubDetail}`}>
+        <Typography color={"primary.main"}>
+          <LuShare2 color="inherit" />
+        </Typography>
+        <Button variant="outlined">اشتراک گذاری</Button>
       </div>
     </CopyToClipboard>
   );

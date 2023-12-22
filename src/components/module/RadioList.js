@@ -1,3 +1,12 @@
+import {
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
 import styles from "@/module/RadioList.module.css";
 
 function RadioList({ profileData, setProfileData }) {
@@ -5,59 +14,31 @@ function RadioList({ profileData, setProfileData }) {
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setProfileData({ ...profileData, [name]: value });
+    setProfileData({ ...profileData, ["category"]: value });
   };
 
   return (
-    <div className={styles.container}>
-      <p>دسته بندی</p>
-      <div className={styles.main}>
-        <div>
-          <label htmlFor="villa">ویلا</label>
-          <input
-            type="radio"
-            name="category"
-            value="villa"
-            id="villa"
-            checked={category === "villa"}
-            onChange={changeHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="apartment">آپارتمان</label>
-          <input
-            type="radio"
-            name="category"
-            value="apartment"
-            id="apartment"
-            checked={category === "apartment"}
-            onChange={changeHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="store">مغازه</label>
-          <input
-            type="radio"
-            name="category"
-            value="store"
-            id="store"
-            checked={category === "store"}
-            onChange={changeHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="office">دفتر</label>
-          <input
-            type="radio"
-            name="category"
-            value="office"
-            id="office"
-            checked={category === "office"}
-            onChange={changeHandler}
-          />
-        </div>
-      </div>
-    </div>
+    <FormControl>
+      <Typography variant="h4" color={"primary.main"} mb={1}>
+        دسته بندی{" "}
+      </Typography>{" "}
+      <RadioGroup
+        row
+        aria-labelledby="category-radio-buttons-group-label"
+        value={category}
+        onChange={changeHandler}
+        name="radio-buttons-group"
+      >
+        <FormControlLabel value="villa" control={<Radio />} label="ویلا" />
+        <FormControlLabel
+          value="apartment"
+          control={<Radio />}
+          label="آپارتمان"
+        />
+        <FormControlLabel value="store" control={<Radio />} label="مغازه" />
+        <FormControlLabel value="office" control={<Radio />} label="دفتر" />
+      </RadioGroup>
+    </FormControl>
   );
 }
 

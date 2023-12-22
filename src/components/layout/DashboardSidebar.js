@@ -2,11 +2,29 @@ import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import LogoutButton from "@/module/LogoutButton";
 import styles from "@/layout/DashboardSidebar.module.css";
+import { Grid } from "@mui/material";
 
 async function DashboardSidebar({ children, email, role }) {
   return (
-    <div className={styles.container}>
-      <div className={styles.sidebar}>
+    <Grid
+      item
+      xs={12}
+      container
+      pt="10px"
+      spacing={2}
+      px={"10px"}
+      className={styles.container}
+    >
+      <Grid
+        item
+        xs={12}
+        md={2}
+        container
+        flexDirection={"column"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        className={styles.sidebar}
+      >
         <CgProfile />
         {role === "ADMIN" ? "ادمین" : null}
         <p>{email}</p>
@@ -16,9 +34,19 @@ async function DashboardSidebar({ children, email, role }) {
         <Link href="/dashboard/add">ثبت آگهی</Link>
         {role === "ADMIN" ? <Link href="/admin">در انتظار تایید</Link> : null}
         <LogoutButton />
-      </div>
-      <div className={styles.main}>{children}</div>
-    </div>
+      </Grid>
+      <Grid
+        item
+        xs={12}
+        md={10}
+        pr={2}
+        container
+        spacing={2}
+        className={styles.main}
+      >
+        {children}
+      </Grid>
+    </Grid>
   );
 }
 

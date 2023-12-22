@@ -2,6 +2,7 @@ import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import styles from "@/module/CustomDatePicker.module.css";
+import { Typography } from "@mui/material";
 
 function CustomDatePicker({ profileData, setProfileData }) {
   const changeHandler = (e) => {
@@ -11,7 +12,10 @@ function CustomDatePicker({ profileData, setProfileData }) {
 
   return (
     <div className={styles.container}>
-      <p>تاریخ ساخت</p>
+      <Typography variant="h4" color={"primary.main"} mb={1}>
+        تاریخ ساخت{" "}
+      </Typography>{" "}
+      <p></p>
       <DatePicker
         calendar={persian}
         locale={persian_fa}
