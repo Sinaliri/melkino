@@ -5,11 +5,20 @@ import styles from "@/template/BuyResidentialsPage.module.css";
 
 function BuyResidentialsPage({ data }) {
   return (
-    <Grid container spacing={2} className={styles.container}>
-      <Grid item xs={3} container className={styles.sidebar}>
+    <Grid container spacing={2} className={styles.container} margin={1}>
+      <Grid item xs={12} sm={2} md={3} container className={styles.sidebar}>
         <Sidebar />
       </Grid>
-      <Grid item xs={9} container spacing={2} className={styles.main}>
+      <Grid
+        item
+        xs={12}
+        sm={10}
+        md={9}
+        padding={"0 4rem !important"}
+        container
+        spacing={2}
+        className={styles.main}
+      >
         {data.length ? null : (
           <p className={styles.text}>هیچ آگهی ثبت نشده است</p>
         )}

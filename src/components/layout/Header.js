@@ -5,13 +5,14 @@ import { FiLogIn } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
 import styles from "@/layout/Header.module.css";
 import { useSession } from "next-auth/react";
+import { Box, Typography } from "@mui/material";
 
 function Header() {
   const { data } = useSession();
 
   return (
     <header className={styles.header}>
-      <div>
+      <Box>
         <ul>
           <li>
             <Link href="/">صفحه اصلی</Link>
@@ -20,7 +21,7 @@ function Header() {
             <Link href="/buy-residential">آگهی ها</Link>
           </li>
         </ul>
-      </div>
+      </Box>
       {data ? (
         <div className={styles.login}>
           <Link href="/dashboard">
@@ -31,7 +32,7 @@ function Header() {
         <div className={styles.login}>
           <Link href="/signin">
             <FiLogIn />
-            <span>ورود</span>
+            <Typography variant="span">ورود</Typography>
           </Link>
         </div>
       )}

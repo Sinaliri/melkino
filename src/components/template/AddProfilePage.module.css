@@ -9,15 +9,15 @@
   font-weight: 400;
   margin-bottom: 80px;
   width: 100%;
-  background-color: #304ffe18;
-  color: #304ffe;
+  background-color: #F2EDED;
+  color: #7210FF;
   border-radius: 10px;
   padding: 10px 15px;
 }
 
 .submit {
   border: none;
-  background-color: #304ffe;
+  background-color: #7210FF;
   color: #fff;
   font-size: 1rem;
   border-radius: 5px;

@@ -93,133 +93,136 @@ function AddProfilePage({ data }) {
   };
 
   return (
-    <Grid
-      item
-      xs={12}
-      container
-      ml={2}
-      className={styles.container}
-      spacing={2}
-    >
+    <Grid item xs={12} container p={2} className={styles.container} spacing={2}>
       <Grid item xs={12}>
         <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
       </Grid>
       <Grid
         item
         xs={12}
-        md={9}
         container
-        rowSpacing={2}
-        border={"1px solid"}
-        borderColor={"primary.main"}
-        padding={"10px"}
-        borderRadius={"30px"}
+        justifyContent={"center"}
+        alignItems={"center"}
       >
-        <TextInput
-          title="عنوان آگهی"
-          name="title"
-          profileData={profileData}
-          setProfileData={setProfileData}
-        />
-        <TextInput
-          title="توضیحات"
-          name="description"
-          profileData={profileData}
-          setProfileData={setProfileData}
-          textarea={true}
-        />
-        <TextInput
-          title="آدرس"
-          name="location"
-          profileData={profileData}
-          setProfileData={setProfileData}
-        />
-
-        <TextInput
-          title="شماره تماس"
-          name="phone"
-          profileData={profileData}
-          setProfileData={setProfileData}
-        />
-
-        <TextInput
-          title="قیمت(تومان)"
-          name="price"
-          profileData={profileData}
-          setProfileData={setProfileData}
-        />
-
-        <TextInput
-          title="بنگاه"
-          name="realState"
-          profileData={profileData}
-          setProfileData={setProfileData}
-        />
-        <Grid item xs={12}>
-          <RadioList
-            profileData={profileData}
-            setProfileData={setProfileData}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextList
-            title="امکانات رفاهی"
-            profileData={profileData}
-            setProfileData={setProfileData}
-            type="amenities"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextList
-            title="قوانین"
-            profileData={profileData}
-            setProfileData={setProfileData}
-            type="rules"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Pictures
-            pictures={profileData.pictures}
-            changeHandler={handlePictureChange}
-          />
-        </Grid>
-
-        <Grid item xs={12}>
-          <CustomDatePicker
-            profileData={profileData}
-            setProfileData={setProfileData}
-          />
-        </Grid>
-
-        <Toaster />
         <Grid
           item
           xs={12}
-          display={"flex"}
+          md={9}
+          container
           justifyContent={"center"}
-          alignItems={"center"}
+          rowSpacing={2}
+          border={"1px solid"}
+          borderColor={"primary.main"}
+          padding={"10px"}
+          borderRadius={"30px"}
+          py={"30px"}
         >
-          {loading ? (
-            <Loader />
-          ) : data ? (
-            <Button
-              variant="contained"
-              fullWidth
-              className={styles.submit}
-              onClick={editHandler}
-            >
-              ویرایش آگهی
-            </Button>
-          ) : (
-            <Button
-              variant="contained"
-              fullWidth
-              className={styles.submit}
-              onClick={submitHandler}
-            >
-              ثبت آگهی
-            </Button>
-          )}
+          <TextInput
+            title="عنوان آگهی"
+            name="title"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+          <TextInput
+            title="توضیحات"
+            name="description"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            textarea={true}
+          />
+          <TextInput
+            title="آدرس"
+            name="location"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+
+          <TextInput
+            title="شماره تماس"
+            name="phone"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+
+          <TextInput
+            title="قیمت(تومان)"
+            name="price"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+
+          <TextInput
+            title="بنگاه"
+            name="realState"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+          <Grid item xs={12}>
+            <RadioList
+              profileData={profileData}
+              setProfileData={setProfileData}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextList
+              title="امکانات رفاهی"
+              profileData={profileData}
+              setProfileData={setProfileData}
+              type="amenities"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextList
+              title="قوانین"
+              profileData={profileData}
+              setProfileData={setProfileData}
+              type="rules"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Pictures
+              pictures={profileData.pictures}
+              changeHandler={handlePictureChange}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <CustomDatePicker
+              profileData={profileData}
+              setProfileData={setProfileData}
+            />
+          </Grid>
+
+          <Toaster />
+          <Grid
+            item
+            xs={12}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            {loading ? (
+              <Loader />
+            ) : data ? (
+              <Button
+                variant="contained"
+                fullWidth
+                className={styles.submit}
+                onClick={editHandler}
+              >
+                ویرایش آگهی
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                fullWidth
+                className={styles.submit}
+                onClick={submitHandler}
+              >
+                ثبت آگهی
+              </Button>
+            )}
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

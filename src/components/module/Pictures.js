@@ -48,8 +48,7 @@ const Pictures = ({ pictures, changeHandler }) => {
         <Grid
           item
           xs={12}
-          md={6}
-          height={"180px"}
+          height={"80px"}
           sx={{ borderRadius: "40px", objectFit: "cover" }}
         >
           <Button
@@ -57,6 +56,7 @@ const Pictures = ({ pictures, changeHandler }) => {
             sx={{
               justifyContent: "center",
               alignItems: "center",
+              alignSelf: "flex-end",
               display: "flex",
               height: "100%",
             }}

@@ -5,7 +5,7 @@
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  background-color: #304ffe;
+  background-color: #7210FF;
   color: #fff;
 }
 
@@ -22,13 +22,13 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  color: #304ffe;
+  color: #7210FF;
   padding: 3px 7px;
   border-radius: 5px;
   transition: all ease-in 0.1s;
 }
 .login a:hover {
-  background-color: #304ffe;
+  background-color: #7210FF;
   color: #fff;
 }
 

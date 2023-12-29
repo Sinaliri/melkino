@@ -1,25 +1,35 @@
 .card {
-  box-shadow: #304ffe4a 0px 4px 15px;
   /* border: 2px solid #304ffe; */
   border-radius: 15px;
   overflow: hidden;
   padding: 10px;
   transition: all ease-in 0.1s;
-  margin: 10px 0;
 }
 
-.card:hover {
-  transform: rotate(-5deg);
-}
 
-.card img {
-  border-radius: 10px;
-}
 
-.card p {
+
+.card .desc{
+line-height: 2rem;
+font-family: '__yekan_3c506a', '__yekan_Fallback_3c506a'!important;
+margin-bottom: 160px;
+}
+.card button ,.card h4{
   font-size: 1.2rem;
   font-weight: 400;
-  color: #304ffe;
+  color: #7210FF;
   text-align: center;
+  font-family: '__yekan_3c506a', '__yekan_Fallback_3c506a' !important;
   margin: 10px 0 5px;
+}
+@media screen and (max-width:900px) {
+  .card .desc{
+    margin-bottom: 100px;
+    }
+    .card .imageSection{
+      order: 1 !important;
+    }
+    .card .descSection{
+      order: 2 !important;
+    }
 }

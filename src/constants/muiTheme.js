@@ -28,6 +28,8 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: [
+      `__yekan_3c506a`,
+      `__yekan_Fallback_3c506a`,
       "Tahoma",
       "-apple-system",
       "BlinkMacSystemFont",
