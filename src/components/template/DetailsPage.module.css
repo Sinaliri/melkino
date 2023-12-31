@@ -8,7 +8,7 @@
 }
 
 .main h1 {
-  color: #304ffe;
+  color: #7210FF;
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 10px;
@@ -55,7 +55,7 @@
 }
 .realState svg {
   font-size: 3rem;
-  color: #304ffe;
+  color: #7210FF;
   margin: 10px 0 20px;
 }
 
@@ -95,13 +95,13 @@
 }
 
 .share button:hover {
-  color: #304ffe;
+  color: #7210FF;
 }
 
 .share svg {
   margin-left: 10px;
   font-size: 1.2rem;
-  color: #304ffe;
+  color: #7210FF;
 }
 
 .price {
@@ -121,5 +121,5 @@
 .price p svg {
   font-size: 1.5rem;
   margin-left: 5px;
-  color: #304ffe;
+  color: #7210FF;
 }
